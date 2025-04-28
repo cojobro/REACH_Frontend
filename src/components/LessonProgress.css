@@ -1,0 +1,13 @@
+.lesson-progress-dashboard {
+  position: fixed; /* Fix position at the bottom */
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #e3f1ff; /* Light grey background */
+  color: #333; /* Dark text color */
+  text-align: center;
+  padding: 10px 0;
+  font-size: 0.9em;
+  border-top: 1px solid #ccc; /* Subtle top border */
+  z-index: 10; /* Ensure it's above other content */
+}

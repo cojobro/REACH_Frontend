@@ -1,0 +1,112 @@
+/* Quiz Page Styles */
+
+.quiz-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px; /* Add some padding */
+  box-sizing: border-box;
+  width: 80%;
+  margin: auto; /* Center */
+  position: relative; /* For absolute positioning of the back button */
+}
+
+
+.quiz-header {
+  text-align: center;
+  margin-bottom: 20px; /* match theme spacing */
+}
+
+.quiz-header h2 {
+  color: var(--primary-blue-darker);
+  font-size: var(--font-size-subtitle); /* Match LessonPage header */
+  margin-bottom: 10px;
+}
+
+
+.quiz-questions-container {
+  width: 100%;
+  background-color: var(--primary-blue-lightest);
+  padding: 20px 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  min-height: 40vh; 
+  margin-bottom: 25px; 
+}
+
+.question-container {
+  padding-bottom: 0; 
+}
+
+.question-text {
+  font-weight: 600; 
+  color: var(--primary-blue-darker);
+  margin-bottom: 15px;
+  font-size: var(--font-size-large);
+}
+
+.options-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Space between options */
+}
+
+.option-label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 8px 12px;
+  border-radius: 5px;
+  transition: background-color 0.2s;
+  background-color: var(--text-white);
+  border: 1px solid var(--border-light);
+}
+
+.option-label:hover {
+  background-color: var(--primary-blue-lighter);
+}
+
+.option-radio {
+  margin-right: 10px;
+  cursor: pointer;
+  /* Style the radio button appearance */
+  appearance: none;
+  background-color: #fff;
+  width: 1.15em;
+  height: 1.15em;
+  border: 1px solid var(--primary-blue-dark);
+  border-radius: 50%;
+  display: grid;
+  place-content: center;
+  flex-shrink: 0; /* Prevent shrinking */
+}
+
+.option-radio::before {
+  content: "";
+  width: 0.65em;
+  height: 0.65em;
+  border-radius: 50%;
+  transform: scale(0);
+  transition: 120ms transform ease-in-out;
+  box-shadow: inset 1em 1em var(--primary-blue);
+}
+
+.option-radio:checked::before {
+  transform: scale(1);
+}
+
+/* Quiz Navigation Styles */
+.quiz-navigation {
+  display: flex;
+  justify-content: space-between; /* Space out Back/Next */
+  width: 100%; /* Take full width of the questions container */
+  margin-top: 20px; /* Add some space above buttons */
+}
+
+
+.quiz-navigation button {
+  padding: 10px 25px; /* Adjust padding as needed */
+  font-size: var(--font-size-base);
+}
