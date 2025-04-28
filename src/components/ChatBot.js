@@ -35,7 +35,7 @@ const ChatBot = ({ onBack }) => {
         setIsLoading(true);
 
         try {
-            const response = await fetch('http://localhost:5000/api/query', {
+            const response = await fetch('https://reach-server-7v7o.onrender.com/api/query', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
