@@ -18,7 +18,7 @@ function LessonPage({ lesson, onNext, onBack, isFirst, isLast }) {
         console.log(`fetching content for: ${lesson.header}`);
 
         try {
-          const response = await fetch('http://localhost:5000/api/generateSlide', {
+          const response = await fetch('https://reach-server-7v7o.onrender.com/api/generateSlide', {
             method: 'post',
             headers: {
               'content-type': 'application/json',
